@@ -2,4 +2,5 @@ data
 traffic_lights_venv
 log.txt
 svm_traffic_lights.pkl
-models_lazy_classifier.otd
+models_lazy_classifier.odt
+
