@@ -74,3 +74,8 @@ class LazyClass(SVM_Model):
         print(models)
         results = models
         return results, predictions
+    
+
+class NeuralNetwork:
+    def __init__(self) -> None:
+        pass
