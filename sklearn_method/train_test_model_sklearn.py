@@ -1,7 +1,7 @@
 import pandas as pd
 import os
-from load_data import Load_data_image
-from svm_model import SVM_Model, LazyClass
+from sklearn_method.load_data import Load_data_image
+from sklearn_method.svm_model import SVM_Model, LazyClass
 import logging
 logging.basicConfig(filename="./log.txt",  datefmt='%H:%M:%S')
 logging.debug("Debug logging test...")

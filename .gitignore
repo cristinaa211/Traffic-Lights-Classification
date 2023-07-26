@@ -3,6 +3,7 @@ traffic_lights_venv
 log.txt
 svm_traffic_lights.pkl
 models_lazy_classifier.odt
-yolo34-openimages.weights
-yolov3.cfg
+yolo
+webServerApiSettings.json
+
 

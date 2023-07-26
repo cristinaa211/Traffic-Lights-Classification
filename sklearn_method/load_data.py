@@ -1,7 +1,7 @@
 import os
 import cv2
 import numpy as np
-from extract_features import normalize_image
+from sklearn_method.extract_features import normalize_image
 
 class Load_data_image():
     def __init__(self,path, label_it = True):
@@ -38,3 +38,4 @@ class Process_data:
         self.data = data
 
     def transform_data(self):
+        pass
