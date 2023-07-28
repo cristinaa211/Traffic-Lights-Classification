@@ -24,14 +24,13 @@ class CustomImageDataset(CustomDataset):
         super().__init__()
 
     def load_data(self, images_path):
-        """Returns a list of image tensors and their paths from given paths."""
-        images_tensors = []
+        """Returns a list of images and their paths."""
+        images = []
         for single_path in images_path:
             im = read_image_PIL(single_path)
-            im_tensor = convert_to_pytorch_tensor(im)
-            images_tensors.append(im_tensor)
-        print("There are {} tensors.".format(len(images_tensors)))
-        return images_tensors
+            images.append(im)
+        print("There are {} images.".format(len(images)))
+        return images
     
     def label_data(self, images_path):
         """Labels data depending on the folder path. If the image is in the "green" folder, it will have the "0" label."""
@@ -48,9 +47,9 @@ class CustomImageDataset(CustomDataset):
     def create_dataset(self, path):
         """Returns the final dataset."""
         images_path = read_files_multiple_directories(path)
-        tensors = self.load_data(images_path)
+        images = self.load_data(images_path)
         labels = self.label_data(images_path)
-        return tensors, labels
+        return images, labels
     
 
 class DataLoader(Dataset):
